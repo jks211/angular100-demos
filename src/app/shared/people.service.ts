@@ -1,11 +1,14 @@
 import { Injectable } from "@angular/core";
 import { Person } from "./models/person.model";
+import { Logging } from "./logging.service";
 
 @Injectable({
   providedIn: "root"
 })
 export class PeopleService {
-  constructor() {}
+  constructor(logger: Logging) {
+    logger.log("Im calling another service!");
+  }
 
   getPeople(): Person[] {
     return [
