@@ -38,13 +38,13 @@ export class ProductListComponent implements OnInit, OnDestroy {
 
   }
 
-  trackByFunction(index: number, product: Product): number {
-    return product.id;
-  }
-
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
     clearInterval(this.intervalId);
+  }
+
+  trackByFunction(index: number, product: Product): number {
+    return product.id;
   }
 }
