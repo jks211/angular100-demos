@@ -6,11 +6,10 @@ import { PersonDetailComponent } from "./person/person-detail.component";
 import { ProductListComponent } from "./products/product-list/product-list.component";
 
 const routes: Routes = [
-  { path: "people", component: PeopleListComponent },
-  { path: "products", component: ProductListComponent },
-  { path: "people/:id", component: PersonDetailComponent },
-  // { path: "people/moo", component: PersonDetailComponent },
   { path: "", redirectTo: "/people", pathMatch: "full" },
+  { path: "people", component: PeopleListComponent },
+  { path: "people/:id", component: PersonDetailComponent },
+  { path: "products", component: ProductListComponent },
   { path: "**", redirectTo: "/people" }
 ];
 
@@ -18,4 +17,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
