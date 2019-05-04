@@ -4,9 +4,11 @@ import { Routes, RouterModule } from "@angular/router";
 import { PeopleListComponent } from "./people-list.component";
 import { PersonDetailComponent } from "./person/person-detail.component";
 import { ProductListComponent } from "./products/product-list/product-list.component";
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/people", pathMatch: "full" },
+  { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "home", component: HomeComponent },
   { path: "people", component: PeopleListComponent },
   { path: "people/:id", component: PersonDetailComponent },
   { path: "products", component: ProductListComponent },
