@@ -11,12 +11,17 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es5",
+    "types": [
+      // add node as an option
+      "node"
+    ],
     "typeRoots": [
-      "node_modules/@types"
+      "node_modules/@types",
+      "src/typings.d.ts"
     ],
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
   }
 }

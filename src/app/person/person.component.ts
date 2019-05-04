@@ -24,7 +24,7 @@ export class PersonComponent implements OnInit {
     this.personClicked.emit(this.name);
   }
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
