@@ -10,8 +10,9 @@ import { Observable, Subscription } from 'rxjs';
 export class EvensObservableComponent implements OnInit, OnDestroy {
 
   numbers = [];
-  evensObservable: Observable<number>;
   subscription: Subscription;
+
+  evensObservable: Observable<number>;
 
   ngOnInit() {
     this.evensObservable =
