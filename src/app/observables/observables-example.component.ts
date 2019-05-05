@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy } from "@angular/core";
-import { from, of, Observable, Subscription } from "rxjs";
 
 @Component({
   selector: "app-observables-example",

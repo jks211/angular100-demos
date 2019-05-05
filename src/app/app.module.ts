@@ -5,8 +5,8 @@ import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { HttpClientModule } from "@angular/common/http";
 import { SpecialPeopleComponent } from './special-people/special-people.component';
-import { ObservablesExampleComponent } from './observables-example/observables-example.component';
-import { EvensObservableComponent } from './observables/evens-observable/evens-observable.component';
+import { ObservablesExampleComponent } from './observables/observables-example.component';
+import { EvensObservableComponent } from './observables/evens-observable.component';
 
 @NgModule({
   declarations: [AppComponent, SpecialPeopleComponent, ObservablesExampleComponent, EvensObservableComponent],
@@ -14,4 +14,4 @@ import { EvensObservableComponent } from './observables/evens-observable/evens-o
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }

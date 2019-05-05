@@ -5,7 +5,8 @@ import { Person } from "./shared/models/person.model";
 
 @Component({
   selector: "app-root",
-  template: `
+  template: `<h2>Open Console.</h2>
+   <p>Toggle Evens. Click Subscribe. Watch display. Toggle Again. Note it stops.</p>
     <app-observables-example></app-observables-example>
   `
 })
