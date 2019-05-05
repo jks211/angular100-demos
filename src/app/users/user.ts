@@ -4,6 +4,10 @@ export interface User {
   "last_name": string;
   "email": string;
   "gender": string;
-  "avatar": string;
   "img": string;
+  "dob": string;
+  "active": string;
+  "username": string;
+  "password": string;
+
 }
