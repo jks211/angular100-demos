@@ -1,6 +1,7 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 settings.json
+wip.js
 # compiled output
 /dist
 /tmp
