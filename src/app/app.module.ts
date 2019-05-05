@@ -8,9 +8,10 @@ import { SpecialPeopleComponent } from './special-people/special-people.componen
 import { ObservablesExampleComponent } from './observables/observables-example.component';
 import { EvensObservableComponent } from './observables/evens-observable.component';
 import { SimpleObservableComponent } from './observables/simple-observable.component';
+import { OddsObservableComponent } from './observables/odds-observable.component';
 
 @NgModule({
-  declarations: [AppComponent, SpecialPeopleComponent, ObservablesExampleComponent, EvensObservableComponent, SimpleObservableComponent],
+  declarations: [AppComponent, SpecialPeopleComponent, ObservablesExampleComponent, EvensObservableComponent, SimpleObservableComponent, OddsObservableComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]

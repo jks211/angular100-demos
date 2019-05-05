@@ -35,7 +35,9 @@ export class EvensObservableComponent implements OnInit, OnDestroy {
   }
 
   unsubscribe() {
-    this.subscription.unsubscribe();
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
   ngOnDestroy() {
