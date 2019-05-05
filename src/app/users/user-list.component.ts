@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from './user';
 
 const userdata = require('../data/users.json');
 
@@ -8,7 +9,8 @@ const userdata = require('../data/users.json');
   styles: []
 })
 export class UserListComponent implements OnInit {
-  userArray: any[];
+  userArray: User[];
+  showCard = true;
 
   ngOnInit() {
     this.userArray = userdata.users;

@@ -11,6 +11,7 @@ export class ProductListComponent implements OnInit, OnDestroy {
   intervalId: any;
   differentQty = 10;
 
+
   ngOnInit() {
     this.products = [
       { id: 1423, description: 'cups', quantity: 30 },

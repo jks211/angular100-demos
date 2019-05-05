@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { User } from './user';
+import { isBrowserEvents } from '@angular/core/src/render3/discovery_utils';
 
 @Component({
   selector: 'app-user-card',
