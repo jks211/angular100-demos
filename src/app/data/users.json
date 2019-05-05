@@ -20,7 +20,7 @@
       "gender": "Female",
       "img": "female1.png",
       "dob": "1/11/2011",
-      "isActive": true,
+      "isActive": false,
       "username": "btarrier",
       "password": "password"
     },

@@ -9,9 +9,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let user of userArray; let i = index; let isEvenBoolean = even" [user]="user" [isEven]="isEvenBoolean"
-      [ngStyle]="{'color':(user.isActive===false ? 'red' : 'inherit'),
-                  'background-color':(isEvenBoolean==true ? 'lightgrey':'inherit') }" app-user-row>
+    <tr *ngFor="let user of userArray; let i = index; let isEvenBoolean = even" [ngStyle]="{'color':(user.isActive===false ? 'red' : 'inherit'),
+                  'background-color':(isEvenBoolean==true ? 'lightgrey':'inherit') }" [user]="user"
+      [isEven]="isEvenBoolean" app-user-row>
     </tr>
   </tbody>
 </table>
