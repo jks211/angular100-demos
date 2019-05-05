@@ -9,9 +9,10 @@ import { ObservablesExampleComponent } from './observables/observables-example.c
 import { EvensObservableComponent } from './observables/evens-observable.component';
 import { SimpleObservableComponent } from './observables/simple-observable.component';
 import { OddsObservableComponent } from './observables/odds-observable.component';
+import { OperatorsObservableComponent } from './observables/operators-observable.component';
 
 @NgModule({
-  declarations: [AppComponent, SpecialPeopleComponent, ObservablesExampleComponent, EvensObservableComponent, SimpleObservableComponent, OddsObservableComponent],
+  declarations: [AppComponent, SpecialPeopleComponent, ObservablesExampleComponent, EvensObservableComponent, SimpleObservableComponent, OddsObservableComponent, OperatorsObservableComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
