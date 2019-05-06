@@ -7,13 +7,21 @@ import { UserListComponent } from './users/user-list.component';
 import { ObservablesExampleComponent }
   from './observables/observables-example.component';
 import { UserDetailComponent } from './users/user-detail.component';
+import { UserLoginComponent } from './user/user-login.component';
+import { UserEditComponent } from './user/user-edit.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
 
   { path: "users", component: UserListComponent },
-  { path: "users/:id", component: UserDetailComponent },
+  {
+    path: "users/:id", component: UserDetailComponent,
+    children: [
+      { path: 'logindetails', component: UserLoginComponent },
+      { path: 'edit', component: UserEditComponent }
+    ]
+  },
 
   { path: "products", component: ProductListComponent },
   { path: "observables", component: ObservablesExampleComponent },

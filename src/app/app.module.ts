@@ -21,9 +21,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { PersonDetailComponent } from './people/person-detail.component';
 import { PersonComponent } from './people/person.component';
 import { UserDetailComponent } from './users/user-detail.component';
+import { UserLoginComponent } from './user/user-login.component';
+import { UserEditComponent } from './user/user-edit.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, PersonDetailComponent, PersonComponent, ProductListComponent, UserListComponent, UserCardComponent, ProductRowComponent, ObservablesExampleComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent, NavbarComponent, EvensObservableComponent, SimpleObservableComponent, OddsObservableComponent, OperatorsObservableComponent, UserDetailComponent],
+  declarations: [AppComponent, HomeComponent, PersonDetailComponent, PersonComponent, ProductListComponent, UserListComponent, UserCardComponent, ProductRowComponent, ObservablesExampleComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent, NavbarComponent, EvensObservableComponent, SimpleObservableComponent, OddsObservableComponent, OperatorsObservableComponent, UserDetailComponent, UserLoginComponent, UserEditComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
