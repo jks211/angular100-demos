@@ -1,26 +1,10 @@
-import { Component, OnInit } from "@angular/core";
-import { PeopleService } from "./shared/people.service";
-import { Person } from "./shared/models/person.model";
-import { Observable } from "rxjs";
+import { Component } from '@angular/core';
 
 @Component({
-  selector: "app-root",
-  template: `
-    <app-navbar></app-navbar>
-    <router-outlet></router-outlet>
-  `
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  people: Person[];
-
-  constructor(private peopleService: PeopleService) {}
-
-  ngOnInit(): void {
-    this.peopleService.getPeople().subscribe(
-      (data: Person[]) => {
-        this.people = data;
-      },
-      error => console.log("error occured", error)
-    );
-  }
+export class AppComponent {
+  title = 'angular100-demos';
 }
