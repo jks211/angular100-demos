@@ -1,17 +1,11 @@
 import { Component, OnInit } from "@angular/core";
-import {
-  AbstractControl,
-  FormBuilder,
-  FormGroup,
-  ValidationErrors,
-  Validators
-} from "@angular/forms";
+import { FormBuilder, FormGroup, Validators} from "@angular/forms";
 import { CreditCardValidatorDirective } from "./credit-card-validator.directive";
 
 @Component({
   selector: "app-forms",
   templateUrl: "reactive-form.component.html",
-  styleUrls: ["template-driven-form.component.css"]
+  styleUrls: ["reactive-form.component.css"]
 })
 export class ReactiveFormComponent implements OnInit {
   registerForm: FormGroup;
