@@ -10,6 +10,8 @@
       <a class="nav-link" [routerLink]="['/users']" routerLinkActive="router-link-active">Users</a>
       <a class="nav-link" [routerLink]="['/products']" routerLinkActive="router-link-active">Products</a>
       <a class="nav-link" [routerLink]="['/observables']" routerLinkActive="router-link-active">Observables</a>
+      <a routerLinkActive="active" (click)="loginOrOut()">{{ loginLogoutText }}</a>
+
     </div>
   </div>
 </nav>
