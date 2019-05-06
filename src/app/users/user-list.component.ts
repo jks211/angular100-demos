@@ -14,7 +14,13 @@ export class UserListComponent implements OnInit {
   constructor(private service: UserService) { }
 
   ngOnInit() {
-    this.userArray = this.service.getUsers();
+    this.service.getUsers().subscribe(
+      (data: User[]) => {
+        this.userArray = data;
+      },
+      error => console.log("error occured", error)
+
+    );
   }
 
   parentFunctionHandler(name) {

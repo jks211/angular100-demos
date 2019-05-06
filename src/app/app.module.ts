@@ -17,10 +17,11 @@ import { EvensObservableComponent } from './observables/evens-observable.compone
 import { OddsObservableComponent } from './observables/odds-observable.component';
 import { SimpleObservableComponent } from './observables/simple-observable.component';
 import { OperatorsObservableComponent } from './observables/operators-observable.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, ProductListComponent, UserListComponent, UserCardComponent, ProductRowComponent, ObservablesExampleComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent, NavbarComponent, EvensObservableComponent, SimpleObservableComponent, OddsObservableComponent, OperatorsObservableComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
 })
