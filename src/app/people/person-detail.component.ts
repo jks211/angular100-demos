@@ -19,5 +19,5 @@ export class PersonDetailComponent implements OnInit {
       .subscribe(id => api.getPerson(id));
   }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
