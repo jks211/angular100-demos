@@ -6,7 +6,7 @@ export interface User {
   "gender": string;
   "img": string;
   "dob": string;
-  "active": string;
+  "isActive": boolean;
   "username": string;
   "password": string;
 

@@ -6,11 +6,13 @@ import { ProductListComponent }
 import { UserListComponent } from './users/user-list.component';
 import { ObservablesExampleComponent }
   from './observables/observables-example.component';
+import { UserDetailComponent } from './users/user-detail.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   { path: "users", component: UserListComponent },
+  { path: "users/:id", component: UserDetailComponent },
   { path: "products", component: ProductListComponent },
   { path: "observables", component: ObservablesExampleComponent },
   { path: "**", redirectTo: "/users" }

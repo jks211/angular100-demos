@@ -18,9 +18,12 @@ import { OddsObservableComponent } from './observables/odds-observable.component
 import { SimpleObservableComponent } from './observables/simple-observable.component';
 import { OperatorsObservableComponent } from './observables/operators-observable.component';
 import { HttpClientModule } from '@angular/common/http';
+import { PersonDetailComponent } from './people/person-detail.component';
+import { PersonComponent } from './people/person.component';
+import { UserDetailComponent } from './users/user-detail.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductListComponent, UserListComponent, UserCardComponent, ProductRowComponent, ObservablesExampleComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent, NavbarComponent, EvensObservableComponent, SimpleObservableComponent, OddsObservableComponent, OperatorsObservableComponent],
+  declarations: [AppComponent, HomeComponent, PersonDetailComponent, PersonComponent, ProductListComponent, UserListComponent, UserCardComponent, ProductRowComponent, ObservablesExampleComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent, NavbarComponent, EvensObservableComponent, SimpleObservableComponent, OddsObservableComponent, OperatorsObservableComponent, UserDetailComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
