@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from './user';
-
-const userdata = require('../data/users.json');
+import { UserService } from './user.service';
 
 @Component({
   selector: 'app-user-list',
@@ -12,8 +11,10 @@ export class UserListComponent implements OnInit {
   userArray: User[];
   showCard = true;
 
+  constructor(private service: UserService) { }
+
   ngOnInit() {
-    this.userArray = userdata.users;
+    this.userArray = this.service.getUsers();
   }
 
   parentFunctionHandler(name) {
