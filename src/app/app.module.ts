@@ -7,8 +7,7 @@ import { HttpClientModule } from "@angular/common/http";
 import { PersonDetailComponent } from "./person/person-detail.component";
 import { NavbarComponent } from "./navbar/navbar.component";
 import { PeopleListComponent } from "./people-list.component";
-// import { ProductsModule } from "./products/products.module";
-import { ProductListComponent } from "./products/product-list/product-list.component";
+import { ProductListComponent } from "./products/product-list.component";
 import { HomeComponent } from './home/home.component';
 
 @NgModule({
@@ -24,4 +23,4 @@ import { HomeComponent } from './home/home.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
