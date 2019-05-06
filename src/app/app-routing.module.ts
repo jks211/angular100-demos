@@ -9,7 +9,6 @@ const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   { path: "users", component: UserListComponent },
-  // { path: "users/:id", component: PersonDetailComponent },
   { path: "products", component: ProductListComponent },
   { path: "observables", component: ObservablesExampleComponent },
   { path: "**", redirectTo: "/people" }
@@ -20,3 +19,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+// { path: "users/:id", component: PersonDetailComponent },
