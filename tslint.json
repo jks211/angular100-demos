@@ -9,6 +9,7 @@
     "deprecation": {
       "severity": "warn"
     },
+    "import-spacing": false,
     "import-blacklist": [
       true,
       "rxjs/Rx"
