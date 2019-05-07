@@ -4,7 +4,7 @@ import { CreditCardValidatorDirective } from "./credit-card-validator.directive"
 
 @Component({
   selector: "app-forms",
-  templateUrl: "reactive-form.component.html",
+  templateUrl: "./reactive-form.component.html",
   styleUrls: ["reactive-form.component.css"]
 })
 export class ReactiveFormComponent implements OnInit {

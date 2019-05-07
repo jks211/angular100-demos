@@ -1,10 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import {
-  FormControl,
-  Validators,
-  FormGroup,
-  FormBuilder
-} from "@angular/forms";
+  FormControl, Validators, FormGroup, FormBuilder} from "@angular/forms";
 
 @Component({
   selector: "app-reactive-login-form",

@@ -14,7 +14,6 @@ const routes: Routes = [
 
   { path: "products", component: ProductListComponent },
   { path: "people/:id", component: PersonDetailComponent },
-  // { path: "people/moo", component: PersonDetailComponent },
   { path: "", redirectTo: "/template-form", pathMatch: "full" },
   { path: "**", redirectTo: "/template-form" }
 ];
