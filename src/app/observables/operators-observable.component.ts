@@ -6,14 +6,14 @@ import { Subscription, Observable } from 'rxjs';
 @Component({
   selector: 'app-operators-observable',
   template: ` <hr /><h2>Numbers Observable with Operators</h2>
-  <button (click)="getNegativeMultiplesOfThree()">Get Multiples Of Three Doubled</button>
+  <button (click)="getNegativeMultiplesOfThree()">Get Negative Multiples Of Three/button>
   <button *ngIf="isStarted" (click)="unsubscribe()">Stop</button>
   {{ numbers }}`
 })
 export class OperatorsObservableComponent implements OnDestroy {
   isStarted = false;
   numbers: number[] = [];
-  subscription: Subscription;
+  subscription: Subscription;   
   oddsObservable: Observable<number>;
 
   constructor(private numberService: NumbersService) { }

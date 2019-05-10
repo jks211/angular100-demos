@@ -17,7 +17,7 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
 
               <div class="mt-5 p-5 border rounded border-primary">
               <h2>RxJS Operators with Observable.</h2><h3>Demos using operators from RxJS</h3>
-    <p>Open Console. Toggle Operators. Click Subscribe. Watch display. After 3 is reached an error is thrown by Observable. </p>
+    <p>Open Console. Toggle Operators. Click Subscribe. Watch display. Notice the time between each additional number, it's filtering by multiple of 3 and negating. </p>
               <button (click)="isOperatorsOn=!isOperatorsOn">Toggle Operators Observable</button>
               <app-operators-observable *ngIf="isOperatorsOn"></app-operators-observable>
               </div>
