@@ -5,6 +5,7 @@
   ],
   "rules": {
     "array-type": false,
+    "align":false,
     "arrow-parens": false,
     "deprecation": {
       "severity": "warn"
