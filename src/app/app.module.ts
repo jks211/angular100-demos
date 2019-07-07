@@ -23,6 +23,7 @@ import { PersonComponent } from './people/person.component';
 import { UserDetailComponent } from './users/user-detail.component';
 
 @NgModule({
+// tslint:disable-next-line: max-line-length
   declarations: [AppComponent, HomeComponent, PersonDetailComponent, PersonComponent, ProductListComponent, UserListComponent, UserCardComponent, ProductRowComponent, ObservablesExampleComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent, NavbarComponent, EvensObservableComponent, SimpleObservableComponent, OddsObservableComponent, OperatorsObservableComponent, UserDetailComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
