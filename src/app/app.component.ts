@@ -5,9 +5,6 @@ import { Component } from '@angular/core';
   template: `<app-navbar></app-navbar>
              <router-outlet></router-outlet>
              <app-footer></app-footer>
-             `,
-  styleUrls: ['./app.component.css']
+             `
 })
-export class AppComponent {
-  title = 'angular100-demos';
-}
+export class AppComponent {}
