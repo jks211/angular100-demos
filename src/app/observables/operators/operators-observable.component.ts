@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { filter, map, tap } from 'rxjs/operators';
-import { NumbersService } from '../shared/numbers.service';
+import { NumbersService } from '../../shared/numbers.service';
 import { Subscription, Observable } from 'rxjs';
 
 @Component({

@@ -1,23 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { ProductListComponent }
-  from './products/product-list.component';
-import { UserListComponent } from './users/user-list.component';
-import { ObservablesExampleComponent }
-  from './observables/observables-example.component';
-import { UserDetailComponent } from './users/user-detail.component';
+import { UserListComponent } from './users/user-list/user-list.component';
+import { UserDetailComponent } from './users/user-detail/user-detail.component';
 
 const routes: Routes = [
-  { path: "", redirectTo: "/home", pathMatch: "full" },
+  { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
-
+  {
+    path: "products", //Angular 8 Notation with Promise
+    loadChildren: () => import('./products/products.module')
+                        .then(mod => {
+                          console.log('in promise loadChildren');
+                          return mod.ProductsModule;
+                        }),
+  },
+  //Before Angular 8
+  { path: "observables", loadChildren: './observables/observables.module#ObservablesModule' },
   { path: "users", component: UserListComponent },
   { path: "users/:id", component: UserDetailComponent },
-
-  { path: "products", component: ProductListComponent },
-  { path: "observables", component: ObservablesExampleComponent },
-  { path: "**", redirectTo: "/users" }
+  { path: "**", redirectTo: "/users" }  //Not foudn page
 ];
 
 @NgModule({

@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
-import { User } from './user';
-import { Router } from '@angular/router';
+import { User } from '../model/user';
 
 @Component({
   selector: 'app-user-card',
@@ -11,6 +10,15 @@ export class UserCardComponent implements OnInit {
 
   @Input()
   user: User;
+
+  @Output()
+  userClicked: EventEmitter<string> = new EventEmitter<string>();
+
+  clickPerson() {
+    this.userClicked.emit(this.user.first_name);
+  }
+
+  constructor() { }
 
   ngOnInit() { }
 
