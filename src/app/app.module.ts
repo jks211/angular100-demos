@@ -13,14 +13,14 @@ import { NgCodeExamplesComponent } from './ng-code-examples/ng-code-examples.com
 import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { ObservablesExampleComponent } from './observables/observables-example.component';
-import { EvensObservableComponent } from './observables/evens-observable.component';
+import { EvensObservableComponent } from './observables/evens/evens-observable.component';
 import { OddsObservableComponent } from './observables/odds-observable.component';
 import { SimpleObservableComponent } from './observables/simple-observable.component';
 import { OperatorsObservableComponent } from './observables/operators-observable.component';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductListComponent, UserListComponent, UserCardComponent, ProductRowComponent, ObservablesExampleComponent, UserTableComponent, UserRowComponent, NgCodeExamplesComponent, NavbarComponent, EvensObservableComponent, SimpleObservableComponent, OddsObservableComponent, OperatorsObservableComponent],
+  declarations: [AppComponent, HomeComponent, NgCodeExamplesComponent, NavbarComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent]
