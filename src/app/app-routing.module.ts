@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ProductListComponent }
   from './products/product-list.component';
-import { UserListComponent } from './users/user-list.component';
+import { UserListComponent } from './users/user-list/user-list.component';
 import { ObservablesExampleComponent }
-  from './observables/observables-example.component';
+  from './observables/observables-list.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
