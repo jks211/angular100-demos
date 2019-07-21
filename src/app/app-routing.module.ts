@@ -7,14 +7,14 @@ const routes: Routes = [
   { path: "", redirectTo: "/home", pathMatch: "full" },
   { path: "home", component: HomeComponent },
   {
-    path: "products",
+    path: "products", //Angular 8 Notation with Promise
     loadChildren: () => import('./products/products.module')
                         .then(mod => {
                           console.log('in promise loadChildren');
                           return mod.ProductsModule;
                         }),
   },
-
+  //Before Angular 8
   { path: "observables", loadChildren: './observables/observables.module#ObservablesModule' },
 
 //  { path: "observables", component: ObservablesExampleComponent },

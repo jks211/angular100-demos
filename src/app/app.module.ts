@@ -14,9 +14,8 @@ import { UsersModule } from './users/users.module';
   declarations: [AppComponent, HomeComponent, NavbarComponent],
   imports: [BrowserModule,
     AppRoutingModule, HttpClientModule,
-    //ObservablesModule, //Having a Module here prevents it form being lazy loaded
-     UsersModule,
-    //  ProductsModule
+    // ObservablesModule, //If uncommented, would be loaded EAGERLY
+     UsersModule
     ],
   providers: [],
   bootstrap: [AppComponent]
