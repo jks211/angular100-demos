@@ -4,7 +4,7 @@ import { Component, OnInit, OnDestroy } from "@angular/core";
   selector: "app-observables-example",
   templateUrl: './observables-list.component.html'
 })
-export class ObservablesExampleComponent {
+export class ObservablesListComponent {
   isEvensOn = false;
   isOddsOn = false;
 }
