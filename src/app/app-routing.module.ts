@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { UserListComponent } from './users/user-list/user-list.component';
 import { UserDetailComponent } from './users/user-detail/user-detail.component';
+import { NotfoundComponent } from './notfound.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -19,7 +20,7 @@ const routes: Routes = [
   { path: "observables", loadChildren: './observables/observables.module#ObservablesModule' },
   { path: "users", component: UserListComponent },
   { path: "users/:id", component: UserDetailComponent },
-  { path: "**", redirectTo: "/users" }  //Not foudn page
+  { path: "**", component: NotfoundComponent }  //Not found page
 ];
 
 @NgModule({
