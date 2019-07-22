@@ -14,6 +14,15 @@
         routerLinkActive="router-link-active">Products</a></li>
       <li class="nav-item"><a class="nav-link" [routerLink]="['/observables']"
         routerLinkActive="router-link-active">Observables</a></li>
+
+
+        <li class="nav-item">
+          <a class="nav-link" (click)="changeLogin()">
+            {{(loggedIn)?'Log Out':'Log In'}}
+          </a>
+        </li>
+
+
     </div>
   </div>
 </nav>

@@ -7,7 +7,8 @@ import { User } from '../users/model/user';
 
 @Injectable({ providedIn: 'root' })
 export class AuthenticationService {
-    private currentUserSubject: BehaviorSubject<User>;
+    private isLoggedIn = false;
+  private currentUserSubject: BehaviorSubject<User>;
     public currentUser: Observable<User>;
 
     constructor(private http: HttpClient) {
@@ -17,6 +18,14 @@ export class AuthenticationService {
 
     public get currentUserValue(): User {
         return this.currentUserSubject.value;
+    }
+
+    toggleLogIn() {
+      this.isLoggedIn = !this.isLoggedIn;
+    }
+
+    isUserLoggedIn() {
+      return this.isLoggedIn;
     }
 
     login(username: string, password: string) {
@@ -32,8 +41,8 @@ export class AuthenticationService {
               "img": "male2.png",
               "dob": "10/02/1978",
               "isActive": true,
-              "username": "username",
-              "password": "password"
+              "username": "user",
+              "password": "root"
             };
 
            // return of({username: 'username', password: 'root'});
