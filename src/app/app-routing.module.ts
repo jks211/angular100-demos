@@ -7,6 +7,7 @@ import { NotfoundComponent } from './notfound.component';
 import { UserLoginComponent } from './users/user-login/user-login.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { AuthGuard } from './auth/auth.guard';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -22,12 +23,20 @@ const routes: Routes = [
   //Before Angular 8
   { path: "observables", loadChildren: './observables/observables.module#ObservablesModule' },
 
+  { path: "login",
+    component: LoginComponent
+  },
+
   { path: "users",
     component: UserListComponent,
-    canActivate: [AuthGuard] },
+    canActivate: [AuthGuard],
+
+  },
 
     {
     path: "users/:id", component: UserDetailComponent,
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
     children: [
       { path: 'logindetails', component: UserLoginComponent },
       { path: 'edit', component: UserEditComponent }

@@ -10,9 +10,10 @@ import { ObservablesModule } from './observables/observables.module';
 import { UsersModule } from './users/users.module';
 import { ProductsModule } from './products/products.module';
 import { NotfoundComponent } from './notfound.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent,NotfoundComponent],
+  declarations: [AppComponent, HomeComponent, NavbarComponent,NotfoundComponent, LoginComponent],
   imports: [BrowserModule,
     AppRoutingModule, HttpClientModule, ObservablesModule, UsersModule, ProductsModule],
   providers: [],
