@@ -8,6 +8,8 @@ import { UserLoginComponent } from './users/user-login/user-login.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
 import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './login/login.component';
+import { LoginFormTemplateComponent } from './login/login-form-template/login-form-template.component';
+import { LoginFormReactiveComponent } from './login/login-form-reactive/login-form-reactive.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -25,7 +27,11 @@ const routes: Routes = [
   { path: "observables", loadChildren: './observables/observables.module#ObservablesModule' },
 
   { path: "login",
-    component: LoginComponent
+    component: LoginComponent,
+    children: [
+      { path: 'loginTemplate', component: LoginFormTemplateComponent },
+      { path: 'loginReactive', component: LoginFormReactiveComponent }
+    ],
   },
 
   { path: "users",
