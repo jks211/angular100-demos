@@ -1,4 +1,8 @@
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { Router, NavigationStart } from '@angular/router';
+
+export let browserRefresh = false;
 
 @Component({
   selector: 'app-root',
@@ -7,4 +11,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular100-demos';
+
+  subscription: Subscription;
+
+  constructor(private router: Router) {
+    this.subscription = router.events.subscribe((event) => {
+        if (event instanceof NavigationStart) {
+          browserRefresh = !router.navigated;
+        }
+    });
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+
 }

@@ -7,22 +7,10 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
 
   constructor(private authService: AuthenticationService,
               private router: Router) { }
-
-  ngOnInit() {
-
-  }
-
-  // changeLogin() {
-  //   // this.loggedIn = !this.loggedIn;
-  //   // if (this.loggedIn) {
-  //      this.authService.login('user', 'root');
-  //      this.router.navigateByUrl(this.authService.redirectUrl);
-  //   // }
-  // }
 
   login() {
     this.authService.login('user', 'root');

@@ -12,13 +12,19 @@ export class AuthenticationService {
 
   public redirectUrl = '';
   isLoggedIn = false;
-  @Output() getLoggedInStatus: EventEmitter<any> = new EventEmitter();
+  @Output() getLoggedInStatus: EventEmitter<boolean> = new EventEmitter();
+
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.isLoggedIn = (localStorage.getItem('loggedin')) ? true : false;
+  }
 
   login(username: string, password: string): Observable<boolean> {
       if (username === 'user' && password === 'root') {
           this.getLoggedInStatus.emit(true);
           this.isLoggedIn = true;
-          localStorage.setItem('currentUser','loggedin')
+          localStorage.setItem('loggedin', 'true');
           return of(true);
       } else {
           this.isLoggedIn = false;
@@ -31,7 +37,7 @@ export class AuthenticationService {
       this.getLoggedInStatus.emit(false);
       this.isLoggedIn = false;
       console.log('logging out user');
-      localStorage.removeItem('currentUser');
+      localStorage.removeItem('loggedin');
       this.router.navigate(['./login']);
   }
 
@@ -39,11 +45,4 @@ export class AuthenticationService {
     return this.isLoggedIn;
   }
 
-
-  // logout() {
-  //   // remove user from local storage to log user out
-  //   // localStorage.removeItem('currentUser');
-  //   // this.currentUserSubject.next(null);
-  //   return of(null);
-  // }
 }
