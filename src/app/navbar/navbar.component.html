@@ -21,6 +21,11 @@
            routerLinkActive="router-link-active">Login</a>
         </li>
 
+        <li *ngIf="loggedIn" class="nav-item">
+            <a class="nav-link" (click)="logout()"
+            routerLinkActive="router-link-active">Logout</a>
+         </li>
+
         <!-- <a class="nav-link" (click)="changeLogin()">
             {{(loggedIn)?'Log Out':'Log In'}}
           </a> -->

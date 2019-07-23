@@ -33,6 +33,8 @@ export class AuthenticationService {
   login(username: string, password: string) {
 
     if (username === 'user' && password === 'root') {
+      this.isLoggedIn = true;
+
       const user =
       {
         id: "1111",

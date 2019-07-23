@@ -10,13 +10,13 @@ export class NavbarComponent implements OnInit {
 
   loggedIn = false;
 
-
   constructor(private authService: AuthenticationService) {}
-
-
-
 
   ngOnInit() {
     this.loggedIn = this.authService.isUserLoggedIn();
+  }
+
+  logout() {
+    this.loggedIn=false;
   }
 }
