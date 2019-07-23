@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: "home", component: HomeComponent },
   {
     path: "products", //Angular 8 Notation with Promise
+    canActivate: [AuthGuard],
     loadChildren: () => import('./products/products.module')
                         .then(mod => {
                           console.log('in promise loadChildren');
