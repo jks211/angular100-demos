@@ -9,9 +9,13 @@ export class LoginFormTemplateComponent implements OnInit {
 
   user = { username: 'defaultuser', password: 'defaultpassword'}
 
+  ngOnInit(): void {
+    throw new Error("Method not implemented.");
+  }
   constructor() { }
 
-  ngOnInit() {
+  onSubmitTemplateBased() {
+
   }
 
 }
