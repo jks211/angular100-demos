@@ -30,7 +30,10 @@ const routes: Routes = [
     component: LoginComponent,
     children: [
       { path: 'loginTemplate', component: LoginFormTemplateComponent },
-      { path: 'loginReactive', component: LoginFormReactiveComponent }
+      { path: 'loginReactive', component: LoginFormReactiveComponent },
+      { path: 'registerReactive', component: LoginFormReactiveComponent },
+
+
     ],
   },
 

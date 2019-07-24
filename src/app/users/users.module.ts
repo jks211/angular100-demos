@@ -10,6 +10,7 @@ import { UserRowComponent } from './user-row/user-row.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserEditComponent } from './user-edit/user-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
  declarations: [UserListComponent,
@@ -20,7 +21,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
                 UserLoginComponent,
                 UserEditComponent],
  imports: [
-   CommonModule, RouterModule
+   CommonModule, RouterModule, ReactiveFormsModule
  ]
 })
 export class UsersModule { }

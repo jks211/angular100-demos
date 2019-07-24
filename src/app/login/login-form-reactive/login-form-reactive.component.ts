@@ -13,8 +13,9 @@ export class LoginFormReactiveComponent {
 
   loginForm: FormGroup;
   isSubmitted = false;
+  isInvalidCredentials = false;
 
-  //makes it easier to access form control values from within template
+  // makes it easier to access form control values from within template
   get formControls() { return this.loginForm.controls; }
 
   username = new FormControl("", Validators.required);
@@ -27,27 +28,19 @@ export class LoginFormReactiveComponent {
       "password": this.password
     });
   }
-  onSubmit() {
-    this.isSubmitted = true;
-    if (this.loginForm.invalid) {
-      return;
-    }
 
+  onSubmitReactBased() {
     if (this.authService.login(this.username.value, this.password.value)) {
+      this.isInvalidCredentials = false;
       if (!this.authService.redirectUrl) {
         this.authService.redirectUrl = '/home';
       }
       this.router.navigateByUrl(this.authService.redirectUrl);
     }
+    else {
+      this.isInvalidCredentials = true;
+    }
 
-    // this.isSubmitted = true;
-    // if(this.loginForm.invalid){
-    //   return;
-    // }
-    // this.authService.login(this.username.value, this.password.value)
-    // .subscribe()
-    // .then(){}
-    // .catch(){}
   }
 
 }

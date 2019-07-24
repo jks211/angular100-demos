@@ -16,9 +16,11 @@ import { NotfoundComponent } from './notfound.component';
 import { LoginComponent } from './login/login.component';
 import { LoginFormTemplateComponent } from './login/login-form-template/login-form-template.component';
 import { LoginFormReactiveComponent } from './login/login-form-reactive/login-form-reactive.component';
+import { CreditCardValidatorDirective } from './directives/credit-card-validator.directive';
+import { RegisterFormReactiveComponent } from './login/register-form-reactive/register-form-reactive.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent,NotfoundComponent, LoginComponent, LoginFormTemplateComponent, LoginFormReactiveComponent],
+  declarations: [AppComponent, HomeComponent, NavbarComponent,NotfoundComponent, LoginComponent, LoginFormTemplateComponent, LoginFormReactiveComponent,CreditCardValidatorDirective, RegisterFormReactiveComponent],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule,
     AppRoutingModule, HttpClientModule, ObservablesModule, UsersModule, ProductsModule],
   providers: [],
