@@ -15,23 +15,43 @@ export class AuthenticationService {
   @Output() getLoggedInStatus: EventEmitter<boolean> = new EventEmitter();
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-    this.isLoggedIn = (localStorage.getItem('loggedin')) ? true : false;
+    // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+     this.isLoggedIn = (localStorage.getItem('loggedin')) ? true : false;
   }
 
-  login(username: string, password: string): Observable<boolean> {
+  login(username: string, password: string): boolean {
       if (username === 'user' && password === 'root') {
+          console.log("correct password");
           this.getLoggedInStatus.emit(true);
           this.isLoggedIn = true;
           localStorage.setItem('loggedin', 'true');
-          return of(true);
+          // in real world use http request
+          return true;
       } else {
+          console.log("incorrect password");
           this.isLoggedIn = false;
           this.getLoggedInStatus.emit(false);
-          return of(false);
+          // in real world use http request
+          return false;
       }
   }
+
+//   login(username: string, password: string): Observable<boolean> {
+//     if (username === 'user' && password === 'root') {
+//         console.log("correct password");
+//         this.getLoggedInStatus.emit(true);
+//         this.isLoggedIn = true;
+//         localStorage.setItem('loggedin', 'true');
+//         // in real world use http request
+//         return of(true);
+//     } else {
+//         console.log("incorrect password");
+//         this.isLoggedIn = false;
+//         this.getLoggedInStatus.emit(false);
+//         // in real world use http request
+//         return of(false);
+//     }
+// }
 
   logout(): void {
       this.getLoggedInStatus.emit(false);
