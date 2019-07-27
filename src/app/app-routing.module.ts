@@ -10,6 +10,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { LoginComponent } from './login/login.component';
 import { LoginFormTemplateComponent } from './login/login-form-template/login-form-template.component';
 import { LoginFormReactiveComponent } from './login/login-form-reactive/login-form-reactive.component';
+import { RegisterFormReactiveComponent } from './login/register-form-reactive/register-form-reactive.component';
 
 const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
@@ -31,7 +32,7 @@ const routes: Routes = [
     children: [
       { path: 'loginTemplate', component: LoginFormTemplateComponent },
       { path: 'loginReactive', component: LoginFormReactiveComponent },
-      { path: 'registerReactive', component: LoginFormReactiveComponent },
+      { path: 'registerReactive', component: RegisterFormReactiveComponent },
 
 
     ],
