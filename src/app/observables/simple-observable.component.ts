@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { from, Observable } from 'rxjs';
 
 @Component({
@@ -12,9 +12,10 @@ export class SimpleObservableComponent {
 
   getData() {
     // when clicked, this function subscribes, values added to array
-    this.arraySource.subscribe(emittedValue => { console.log(`values`, emittedValue);
-              (this.numbers = [...this.numbers, emittedValue]);
-          });
+    this.arraySource.subscribe(emittedValue => {
+      console.log(`values`, emittedValue);
+      (this.numbers = [...this.numbers, emittedValue]);
+    });
   }
 }
 

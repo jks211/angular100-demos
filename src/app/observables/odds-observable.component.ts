@@ -35,7 +35,7 @@ export class OddsObservableComponent implements OnInit, OnDestroy {
           this.numbers = [...this.numbers, val];
           console.log(val);
         },
-        error => { alert('An error occured ' + error); }
+        error => { alert('An error occurred ' + error); }
       );
   }
 
