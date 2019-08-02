@@ -13,7 +13,7 @@ import { Subscription, Observable } from 'rxjs';
 export class OperatorsObservableComponent implements OnDestroy {
   isStarted = false;
   numbers: number[] = [];
-  subscription: Subscription;   
+  subscription: Subscription;
   oddsObservable: Observable<number>;
 
   constructor(private numberService: NumbersService) { }
@@ -32,7 +32,7 @@ export class OperatorsObservableComponent implements OnDestroy {
           this.numbers = [...this.numbers, val];
           console.log(val);
         },
-        error => { alert('An error occured ' + error); }
+        error => { alert('An error occurred ' + error); }
       );
   }
 

@@ -30,7 +30,8 @@ export class EvensObservableComponent implements OnInit, OnDestroy {
         val => {
           this.numbers = [...this.numbers, val];
           console.log(val);
-        }
+        },
+        error => { alert('An error occurred ' + error); }
       );
   }
 
