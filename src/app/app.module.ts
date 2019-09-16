@@ -18,11 +18,16 @@ import { LoginFormTemplateComponent } from './login/login-form-template/login-fo
 import { LoginFormReactiveComponent } from './login/login-form-reactive/login-form-reactive.component';
 import { CreditCardValidatorDirective } from './directives/credit-card-validator.directive';
 import { RegisterFormReactiveComponent } from './login/register-form-reactive/register-form-reactive.component';
+import { StoreModule } from '@ngrx/store';
+//import { reducers, metaReducers } from './reducers';
+import { counterReducer } from './store/reducers/counter.reducer';
+import { MyCounterComponent } from './my-counter/my-counter.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, NavbarComponent,NotfoundComponent, LoginComponent, LoginFormTemplateComponent, LoginFormReactiveComponent,CreditCardValidatorDirective, RegisterFormReactiveComponent],
+  declarations: [AppComponent, HomeComponent, NavbarComponent,NotfoundComponent, LoginComponent, LoginFormTemplateComponent, LoginFormReactiveComponent,CreditCardValidatorDirective, RegisterFormReactiveComponent, MyCounterComponent],
   imports: [BrowserModule, FormsModule, ReactiveFormsModule,
-    AppRoutingModule, HttpClientModule, ObservablesModule, UsersModule, ProductsModule],
+    AppRoutingModule, HttpClientModule, ObservablesModule, UsersModule, ProductsModule, 
+  StoreModule.forRoot({ count: counterReducer })],
   providers: [],
   bootstrap: [AppComponent]
 })
