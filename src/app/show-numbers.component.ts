@@ -30,6 +30,6 @@ export class ShowNumbersComponent implements OnInit, OnDestroy {
   ngOnDestroy(): void {
     //Called once, before the instance is destroyed.
     //Add 'implements OnDestroy' to the class.
-    clearInterval(this.intervalID);
+    // clearInterval(this.intervalID);
   }
 }
