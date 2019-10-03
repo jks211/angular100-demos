@@ -1,8 +1,5 @@
 import { Injectable, EventEmitter, Output } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject, Observable, of } from 'rxjs';
-import { map } from 'rxjs/operators';
-import { User } from '../users/model/user';
+import { Observable, of } from 'rxjs';
 import { Router } from '@angular/router';
 
 @Injectable({ providedIn: 'root' })
@@ -15,8 +12,8 @@ export class AuthenticationService {
   @Output() getLoggedInStatus: EventEmitter<boolean> = new EventEmitter();
 
   ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
+    // Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    // Add 'implements OnInit' to the class.
     this.isLoggedIn = (localStorage.getItem('loggedin')) ? true : false;
   }
 
