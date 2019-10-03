@@ -27,10 +27,10 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
       console.log("User is NOT logged in - rerouting");
 
       // old way pre Angular 7.1
-       this.router.navigate(['./login']);
+      //  this.router.navigate(['./login']);
 
       // new way using UrlTree return type
-     // this.router.createUrlTree(['./login']);
+     return this.router.createUrlTree(['./login']);
   }
   canActivateChild(
     next: ActivatedRouteSnapshot,
